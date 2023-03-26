@@ -6,7 +6,6 @@ const mongoDB = async () => {
     try {
         await mongoose.connect(mongoUri, { useNewUrlParser: true })
         console.log("connected");
-        console.log("all set");
     } catch (err) {
         console.log('connection error', err);
     }
