@@ -65,14 +65,14 @@ export default function Home() {
 
                 <div>
                     {
-                        foodCat !== [] ? foodCat.map((data, i) => {
+                        foodCat !== [] ? foodCat?.map((data, i) => {
                             return (
                                 <div key={i} className='row mb-3'>
                                     <div key={data.id} className="fs-2 fst-italic m-3">
                                         {data.CategoryName}
                                     </div>
                                     <hr />
-                                    {foodItem !== [] ? foodItem.filter(
+                                    {foodItem !== [] ? foodItem?.filter(
                                         (item) => (item.CategoryName === data.CategoryName) && (item.name.toLowerCase().includes(search.toLocaleLowerCase())))
                                         .map((filterItems) => {
                                             return (
