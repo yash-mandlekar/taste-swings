@@ -6,13 +6,7 @@ const mongoDB = async () => {
     try {
         await mongoose.connect(mongoUri, { useNewUrlParser: true })
         console.log("connected");
-        const fetch_data = mongoose.connection.db.collection("food_items");
-        const data = await fetch_data.find({}).toArray()
-        const fetch_data1 = mongoose.connection.db.collection("food_category");
-        const data1 = await fetch_data1.find({}).toArray()
         console.log("all set");
-        global.food_category = data1;
-        global.food_items = data;
     } catch (err) {
         console.log('connection error', err);
     }

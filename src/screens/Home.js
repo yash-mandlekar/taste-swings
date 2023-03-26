@@ -12,7 +12,7 @@ export default function Home() {
 
     const loadData = async () => {
         try{
-            let { data } = await Axios.post("/fooddata");
+            let { data } = await Axios.get("/fooddata");
             // console.log(response[0],response[1]);
             setFoodItem(data[0]);
             setFoodCat(data[1]);
