@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 5000;
+const port = 4000;
 const cookieParser = require("cookie-parser")
 const mongoDB = require('./db')
 mongoDB();
@@ -8,15 +8,6 @@ mongoDB();
 app.get('/', (req, res) => {
     res.send("hello world");
 })
-
-// app.use((req,res,next)=>{
-//     res.setHeader("Access-Control-Allow-Origin",["https://taste-swings.vercel.app/","http://localhost:3000"]);
-//     res.header(
-//         "Access-Control-Allow-Headers",
-//         "Oringin,X-Requested-With,Content-Type,Accept",
-//     );
-//     next(); 
-// })
 app.use(
     require("cors")({
         origin: [
@@ -33,5 +24,5 @@ app.use('/api', require('./Routes/CreateUsers'));
 app.use('/api', require('./Routes/DisplayData'));
 app.use('/api', require('./Routes/OrderData'));
 app.listen(port, () => {
-    console.log("listening");
+    console.log(`listening on port ${port}`);
 });
