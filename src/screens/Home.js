@@ -26,8 +26,7 @@ export default function Home() {
     <div>
       <div className="fs-4" style={{ width: "100%" }}>
         <div>
-          {" "}
-          <Navbar />{" "}
+          <Navbar />
         </div>
         <div>
           <div
