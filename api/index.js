@@ -2,12 +2,7 @@ const express = require('express');
 const app = express();
 const port = 4000;
 const cookieParser = require("cookie-parser")
-const mongoDB = require('./db')
-mongoDB();
-
-app.get('/', (req, res) => {
-    res.send("hello world");
-})
+require('./db')()
 app.use(
     require("cors")({
         origin: [

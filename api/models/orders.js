@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-const{Schema}=mongoose;
-const orderSchema = new Schema({
+
+const orderSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
