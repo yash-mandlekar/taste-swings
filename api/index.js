@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 app.use(
     require("cors")({
         origin: [
-            "https://taste-swings.vercel.app",
+            "https://taste-swings-two.vercel.app",
             "http://localhost:3000",
         ],
         credentials: true,
