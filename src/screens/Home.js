@@ -11,7 +11,7 @@ export default function Home() {
   const loadData = async () => {
     try {
       let { data } = await Axios.get("/fooddata");
-      console.log(data?.items, data?.category);
+      console.log(data, data?.category);
       setFoodItem(data.items);
       setFoodCat(data.category);
     } catch (err) {
